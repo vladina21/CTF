@@ -1,0 +1,10 @@
+Description
+Files can always be changed in a secret way. Can you find the flag? cat.jpg
+
+sudo apt install libimage-exiftool-perl (am instalat efixtool pentru a putea inspecta imaginea)
+exiftool cat.jpg (am obtinut mai multe date despre imagine : Copyright Notice, Application Record Version, License etc.)
+'License  : cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9'
+
+$ echo cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9 | base64 -d
+
+Flag: picoCTF{the_m3tadata_1s_modified}

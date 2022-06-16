@@ -1,0 +1,13 @@
+Description
+I wonder what this really is... enc ''.join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])
+
+Google : CyberChef
+Magic Mode
+Input : 灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸強㕤㐸㤸扽
+
+Encode_text('UTF-16BE (1201)')
+picoCTF{16_bits_inst34d_of_8_75d4898b}
+
+Flag: picoCTF{16_bits_inst34d_of_8_75d4898b}
+
+https://www.youtube.com/watch?v=YK0PD4ePsh8&t=228s (alta solutie nu am gasit...)

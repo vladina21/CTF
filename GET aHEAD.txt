@@ -1,0 +1,16 @@
+Description
+Find the flag being held on this server to get ahead of the competition http://mercury.picoctf.net:45028/
+
+Dupa ce am deschis link-ul am ales optiunea Inspect, erau doua metode GET si HEAD.
+
+Am folosit comanda curl (pt transfer de URL-uri)
+
+sudo apt install curl
+curl -I HEAD -i http://mercury.picoctf.net:45028/index.php
+
+Output: 
+curl: (6) Could not resolve host: HEAD
+HTTP/1.1 200 OK
+flag: picoCTF{r3j3ct_th3_du4l1ty_775f2530}
+Content-type: text/html; charset=UTF-8
+

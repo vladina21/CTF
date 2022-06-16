@@ -1,0 +1,13 @@
+Description
+Python scripts are invoked kind of like programs in the Terminal... Can you run this Python script using this password to get the flag?
+
+$ wget https://mercury.picoctf.net/static/5c4c0cbfbc149f3b0fc55c26f36ee707/ende.py (am obtinut fisierul .py)
+chmod +x ende.py (am adaugat permisiunea execute)
+sudo apt install python
+sudo apt install python3
+sudo apt install python3-pip
+pip install cryptography (pentru a avea acces la clasa cryptography deoarece in cod erau folosite metode din aceasta clasa : encrypt si decrypt)
+python3 ende.py -d flag.txt.en (am rulat codul cu fisierul dat ca parametru, am introdus parola data si am obtinut flag-ul)
+
+
+Flag: picoCTF{4p0110_1n_7h3_h0us3_192ee2db}

@@ -1,0 +1,6 @@
+Description
+Cryptography can be easy, do you know what ROT13 is? cvpbPGS{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_jdJBFOXJ}
+
+ROT13(rotatie de 13 pozitii, schimba litera cu cea care se afla 13 pozitii in fata ei in alfabet) este o metoda de codificare. Am cautat un decodificator online pentru cvpbPGS{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_jdJBFOXJ} si am obtinut flag-ul.
+
+Flag: picoCTF{next_time_I'll_try_2_rounds_of_rot13_wqWOSBKW}
