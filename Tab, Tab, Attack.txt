@@ -1,0 +1,19 @@
+Description
+Using tabcomplete in the Terminal will add years to your life, esp. when dealing with long rambling directory structures and filenames: Addadshashanammu.zip
+
+Am mutat arhiva pe masina virtuala cu drag and drop.
+unzip Addadsh...*tab* (s-a creat un director)
+cd Addads...*tab*
+ls (output : Almurbalarammi)
+cd Almur...*tab*
+ls (output : Ashalmimilkala)
+cd Ash...*tab*
+cd Assur...*tab*
+cd Mael...*tab*
+cd Onni...*tab*
+cd Ularr..*tab*
+ls (output : fang-of-hayne...*tab*.. -> fisier cu multe caractere)
+
+Flag: picoCTF{l3v3l_up!_t4k3_4_r35t!_6f332f10}
+
+

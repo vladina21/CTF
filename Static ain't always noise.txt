@@ -1,0 +1,11 @@
+Description
+Can you look at the data in this binary: static? This BASH script might help!
+
+Am preluat fisierele static si BASH script(ltdis.sh) in masina virtuala cu drag and drop
+
+gedit ltdis.sh (am observat ca scriptul primeste un parametru si creaza un fisier.txt)
+chmod +x ltdis.sh
+./ltdis.sh static (s-a creat fisierul static.ltdis.strings.txt)
+cat static.ltdis.strings.txt (au aparut mai multe stringuri printre care si flag-ul)
+
+Flag: picoCTF{d15a5m_t34s3r_f5aeda17}

