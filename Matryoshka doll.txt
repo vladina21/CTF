@@ -1,0 +1,30 @@
+Description
+Matryoshka dolls are a set of wooden dolls of decreasing size placed one inside another. What's the final one? Image: this
+
+Am descarcat imaginea. 
+Gandindu-ma la conceptul de Matryoshka am incercat sa gasesc fisiere ascunse in interiorul imaginii asa ca am folosit tool-ul binwalk
+
+sudo apt install binwalk
+binwalk -e dolls.jpg (-e extrage toate fisierele)
+ls (am observat directorul _dolls.jpg.extracted)
+cd __dolls.jpg.extracted
+ls (2_c.jpg)
+binwalk -e 2_c.jpg
+ls (am observat ca s-a creat _2_c.jpg.extracted)
+cd _2_c.jpg.extracted
+ls
+cd base_images
+ls
+binwalk -e 3_c.jpg
+ls
+cd _3_c.jpg.extracted
+ls
+cd base_images
+ls
+binwalk -e 4_c.jpg
+ls
+cd _4_c.jpg.extracted
+ls (am obtinut flag.txt)
+cat flag.txt
+
+Flag: picoCTF{4cf7ac000c3fb0fa96fb92722ffb2a32}

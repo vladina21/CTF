@@ -1,0 +1,7 @@
+Description
+Can you find the flag in file without running it?
+
+strings afiseaza caracterele 'printable'
+strings strings | grep picoCTF
+
+Flag: picoCTF{5tRIng5_1T_827aee91}

@@ -1,0 +1,13 @@
+Description
+Can you convert the number 42 (base 10) to binary (base 2)?
+
+42 : 2 = 21 r 0
+21 : 2 = 10 r 1
+10 : 2 = 5 r 0
+5 : 2 = 2 r 1
+2 : 2 = 1 r 0
+1 : 2 = 0 r 1
+
+42 (dec) = 101010 (bin)
+
+Flag: picoCTF{101010}

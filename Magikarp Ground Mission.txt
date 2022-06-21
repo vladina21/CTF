@@ -1,0 +1,24 @@
+Description
+Do you know how to move between directories and read files in the shell? Start the container, `ssh` to it, and then `ls` once connected to begin. Login via `ssh` as `ctf-player` with the password, `ee388b88`
+
+ssh ctf-player@venus.picoctf.net -p 50820
+ls (output : 1of3.flag.txt instructions-to-2of3.txt)
+cat 1of3.flag.txt (output: picoCTF{xxsh_
+cat instructions-to-2of3.txt (output: Next, go to the root of all things, more succinctly `/`)
+cd ~
+ls (output: 3of3.flag.txt  drop-in)
+cat 3of3.flag.txt
+cd ..
+ls -a
+cd ..
+ls -a
+output:
+
+.	       bin   home		       media  root  sys
+..	       boot  instructions-to-3of3.txt  mnt    run   tmp
+.dockerenv     dev   lib		       opt    sbin  usr
+2of3.flag.txt  etc   lib64		       proc   srv   var
+cat 2of3.flag.txt
+
+Flag: picoCTF{xxsh_0ut_0f_\/\/4t3r_3ca613a1}
+
