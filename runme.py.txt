@@ -1,0 +1,10 @@
+Description
+Run the runme.py script to get the flag. Download the script with your browser or with wget in the webshell.
+Download runme.py Python script
+
+De obicei pentru a accesa fisierele pe masina virtuala le mutam cu drag and drop dar la hints era mentionata comanda wget, deci...
+
+$wget https://artifacts.picoctf.net/c/86/runme.py
+$python4 runme.py
+
+Flag: picoCTF{run_s4n1ty_run}

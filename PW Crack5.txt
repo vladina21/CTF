@@ -1,0 +1,63 @@
+Description
+Can you crack the password to get the flag?
+Download the password checker here and you'll need the encrypted flag and the hash in the same directory too. Here's a dictionary with all possible passwords based on the password conventions we've seen so far.
+
+Am incercat aceeasi metoda ca la PWCrack 4 prin adaugarea unui for prin posibilele parole din fisier, iar la output-ul comenzii am dat comanda grep picoCTF dar nu a functionat pentru ca la fiecare parola se adauga un /n si astfel toate apareau ca incorecte. :(
+
+La sectiunea hint aparea functia strip pentru stergerea caracterelor invizibile (whitespace). Deci:
+
+Functia relevanta initiala :
+
+
+def level_5_pw_check():
+    user_pw = input("Please enter correct password for flag: ")
+    user_pw_hash = hash_pw(user_pw)
+    
+    if( user_pw_hash == correct_pw_hash ):
+        print("Welcome back... your flag, user:")
+        decryption = str_xor(flag_enc.decode(), user_pw)
+        print(decryption)
+        return
+    print("That password is incorrect")
+
+
+
+level_5_pw_check()
+
+Modificari :
+
+def level_5_pw_check(user_pw):
+
+    #user_pw = input("Please enter correct password for flag: ")
+
+    user_pw_hash = hash_pw(user_pw)
+
+    
+
+    if( user_pw_hash == correct_pw_hash ):
+
+        print("Welcome back... your flag, user:")
+
+        decryption = str_xor(flag_enc.decode(), user_pw)
+
+        print(decryption)
+
+        return
+
+    print("That password is incorrect")
+
+
+
+with open("/home/vladina/dictionary.txt") as dictionary:
+	lines = dictionary.readlines()
+	for line in lines:
+		line = line.strip() #functie care sterge caracterele invizibile (whitespace)
+		level_5_pw_check(line)
+
+
+
+#level_5_pw_check()
+
+$python3 level5.py | grep picoCTF
+
+Flag: picoCTF{h45h_sl1ng1ng_36e992a6}
